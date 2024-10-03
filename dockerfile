@@ -1,5 +1,4 @@
-FROM eclipse-temurin:17-jdk-alpine
-WORKDIR /app
-COPY target/franchise-app.jar /app/franchise-app.jar
+FROM openjdk:17
+COPY franchise-core-app/build/libs/franchise-core-app-0.0.1-SNAPSHOT.jar franchise.jar
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "franchise-app.jar"]
+ENTRYPOINT ["java", "-jar", "franchise.jar"]
